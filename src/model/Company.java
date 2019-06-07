@@ -1,3 +1,9 @@
+/**
+*@author Samuel Satizabal
+*
+*/
+
+
 package model;
 
 public abstract class Company{
