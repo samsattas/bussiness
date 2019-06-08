@@ -43,8 +43,12 @@ public class Holding{
 		return count;
 	}
 
+
 	public String showInfoCompany(){
-		
+		String msg = "";
+		for(int i = 0; i < companies.size(); i++){
+			msj += companies.get(i).toString();
+		}
 	}
 
 

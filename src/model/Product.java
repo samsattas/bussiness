@@ -1,6 +1,7 @@
 package model;
 
-public class Product{
+public class Product{//D
+	
 //ATTRIBUTES
 	private String name;
 	private String code;
@@ -59,5 +60,20 @@ public class Product{
 
 	public void setInvima(Invima invima){
 		this.invima = invima;
+	}
+
+
+//TOSTRING PRODUCT INFORMATION
+	public String toString(){
+		String msg = "";
+		
+		msg += "========= INFO PRODUCTO =========";
+		msg += "=================================";
+		msg += "NOMBRE: " + name;
+		msg += "CODIGO: " + code;
+		msg += "UNIDADES: " + units;
+		msg += "=================================";
+		
+		return msg;
 	}
 }
