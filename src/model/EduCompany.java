@@ -1,7 +1,7 @@
 package model;
 
 public class EduCompany extends Service{
-//STATICS
+//CONSTANTS
 	public final static String BA = "Bachillerato";
 	public final static String UN = "Universidad";
 

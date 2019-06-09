@@ -1,22 +1,22 @@
 package model;
 
 public class Product{//D
-	
+
 //ATTRIBUTES
 	private String name;
 	private String code;
 	private double water;
 	private int units;
-	private Invima invima;
+	
 
 
 //CONSTRUCTOR
-	public Product(String name, String code, double  water, int units, Invima invima){
+	public Product(String name, String code, double  water, int units){
 		this.name = name;
 		this.code = code;
 		this.water = water;
 		this.units = units;
-		this.invima = invima;
+		
 	}
 
 
@@ -37,9 +37,7 @@ public class Product{//D
 		return units;
 	}
 
-	public Invima getInvima(){
-		return invima;
-	}
+	
 
 
 	public void setName(String name){
@@ -58,21 +56,19 @@ public class Product{//D
 		this.units = units;
 	}
 
-	public void setInvima(Invima invima){
-		this.invima = invima;
-	}
+	
 
 
-//TOSTRING PRODUCT INFORMATION
+//toString PRODUCT INFORMATION
 	public String toString(){
 		String msg = "";
 		
-		msg += "========= INFO PRODUCTO =========";
-		msg += "=================================";
-		msg += "NOMBRE: " + name;
-		msg += "CODIGO: " + code;
-		msg += "UNIDADES: " + units;
-		msg += "=================================";
+		msg += "========= INFO PRODUCTO =========\n";
+		msg += "=================================\n";
+		msg += "NOMBRE: " + name + "\n";
+		msg += "CODIGO: " + code + "\n";
+		msg += "UNIDADES: " + units + "\n";
+		msg += "=================================\n";
 		
 		return msg;
 	}

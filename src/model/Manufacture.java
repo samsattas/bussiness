@@ -9,6 +9,6 @@ public class Manufacture extends Company{
 		products = new ArrayList<Product>();
 	}
 
-	public int aguaXarbol(){}
+	
 	
 }

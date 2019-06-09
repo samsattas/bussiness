@@ -1,10 +1,10 @@
 package model;
 
 public class MedCompany{
-//STATICS
-	public static final String FE = "fabricar y exportar";
-	public static final String FV = "fabricar y vender";
-	public static final String IV = "importar y vender";
+//CONSTANTS
+	public final static String FE = "fabricar y exportar";
+	public final static String FV = "fabricar y vender";
+	public final static String IV = "importar y vender";
 
 //ATTRIBUTES
 	private String sanitary;
@@ -54,17 +54,19 @@ public class MedCompany{
 		this.modality = modality;
 	}
 
-
+//toString MEDICINE INFORMATION
 	public String toString(){
 		String msg = "";
 
-		msg += "======== INFO MEDICAMENTO ========";
-		msg += "==================================";
-		msg += "REGISTRO SANITARIO: " + sanitary;
-		msg += "ESTADO: " + status;
-		msg += "VENCIMIENTO: " + expiration;
-		msg += "MODALIDAD: " + modality;
-		msg += "==================================";
+		msg += "======== INFO MEDICAMENTO ========\n";
+		msg += "==================================\n";
+		msg += "REGISTRO SANITARIO: " + sanitary + "\n";
+		msg += "ESTADO: " + status + "\n";
+		msg += "VENCIMIENTO: " + expiration + "\n";
+		msg += "MODALIDAD: " + modality + "\n";
+		msg += "==================================\n";
+
+		return msg;
 	}
 
 

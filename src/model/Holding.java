@@ -38,7 +38,7 @@ public class Holding{
 	public int companyCount(int select){
 		int count = 0;
 		if(select == 0){
-			many = companies.size();
+			count = companies.size();
 		}
 		return count;
 	}
@@ -47,9 +47,18 @@ public class Holding{
 	public String showInfoCompany(){
 		String msg = "";
 		for(int i = 0; i < companies.size(); i++){
-			msj += companies.get(i).toString();
+			msg += companies.get(i).toString();
 		}
+
+		return msg;
 	}
 
 
+	public String getCompaniesName(){
+		String msg = "";
+		for(int i = 0; i < companies.size(); i++){
+			msg += companies.get(i).getName();
+		}
+		return msg;
+	}
 }
