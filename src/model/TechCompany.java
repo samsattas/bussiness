@@ -1,6 +1,6 @@
 package model;
 
-public class TechCompany extends Service{
+public class TechCompany extends Service implements Trees{
 //CONSTANTS	
 	public final static String CC = "Consultoria capacitacion";
 	public final static String DSM = "Desarrollo de software a la medida";
@@ -39,14 +39,14 @@ public class TechCompany extends Service{
 
 
 //METHODS
-	public int energiaXarbol(){
+	public int xArbol(){
 		int aux = 0;
 		if(getEnergy()>0 && getEnergy()<=1000){
 			aux = 8;
 		}else if(getEnergy()>1000 && getEnergy()<=3000) {
 			aux = 35;
 		}else if(getEnergy()>3000){
-			aux =500;
+			aux = 500;
 		}
 
 		return aux;
@@ -60,7 +60,7 @@ public class TechCompany extends Service{
 		msg += "======== INFO TECNOLOGIA ========\n";
 		msg += "SERVICIO: " + service + "\n";
 		msg += "ENERGIA: " + energy + "\n";
-		msg += "ARBOLES: " + energiaXarbol() + "\n";
+		msg += "ARBOLES: " + xArbol() + "\n";
 		msg += "=================================\n";
 
 		return msg;

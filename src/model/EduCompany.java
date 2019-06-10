@@ -9,17 +9,19 @@ public class EduCompany extends Service{
 	private String registerNumber;
 	private int hqYears;
 	private int ranking;
+	private int rankingPro;
 	private String directorName;
 	private String sector;
 	private int students1and2;
 	private int totalStudents;
 
 //CONSTRUCTOR
-	public EduCompany(String name, int nit, String adress, int phoneNumber, int numberOfEmloyees, double actives, Date constitutionDate, String type, String agentName, String registerNumber,int hqYears, int ranking, String directorName, String sector, int students1and2, int totalStudents){
+	public EduCompany(String name, int nit, String adress, int phoneNumber, int numberOfEmloyees, double actives, Date constitutionDate, String type, String agentName, String registerNumber,int hqYears, int ranking, int rankingPro, String directorName, String sector, int students1and2, int totalStudents){
 		super(name, nit, adress, phoneNumber, numberOfEmloyees, actives, constitutionDate, type, agentName);
 		this.registerNumber = registerNumber;
 		this.hqYears = hqYears;
 		this.ranking = ranking;
+		this.rankingPro = rankingPro;
 		this.directorName = directorName;
 		this.sector = sector;
 		this.students1and2 = students1and2;
@@ -37,6 +39,10 @@ public class EduCompany extends Service{
 
 	public int getRanking(){
 		return ranking;
+	}
+
+	public int getRankingPro(){
+		return rankingPro;
 	}
 
 	public String getDirectorName(){
@@ -68,6 +74,10 @@ public class EduCompany extends Service{
 		this.ranking = ranking;
 	}
 
+	public void setRankingPro(int rankingPro){
+		this.rankingPro = rankingPro;
+	}
+
 	public void setDirectorName(String directorName){
 		this.directorName = directorName;
 	}
@@ -84,4 +94,14 @@ public class EduCompany extends Service{
 		this.totalStudents = totalStudents;
 	}
 
+
+	public double proCultura(){
+		double aux = 0.0;
+		aux += 20 - ( students1and2/100);
+
+		if(aux < 0){
+			aux = 0.0;
+		}
+		return aux;
+	}
 }
